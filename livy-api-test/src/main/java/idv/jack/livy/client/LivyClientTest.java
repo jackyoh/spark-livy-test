@@ -21,8 +21,10 @@ public class LivyClientTest {
 		
 		
 		System.out.println("Running Pi Job");
-		double pi = client.submit(new PiJob(10)).get();
+		double pi = client.submit(new PiJob(3)).get();
 		
 		System.out.println("Pi is roughly: " + pi);
+		
+		client.stop(true);
 	}
 }
