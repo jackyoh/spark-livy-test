@@ -23,10 +23,13 @@ repositories {
 
 dependencies {
     compile 'junit:junit:4.12'
-    compile files('lib/livy-api-0.3.0-SNAPSHOT.jar')    
-    compile files('lib/livy-client-common-0.3.0-SNAPSHOT.jar')
-    compile files('lib/livy-core-0.3.0-SNAPSHOT.jar')
-    compile files('lib/livy-rsc-0.3.0-SNAPSHOT.jar')
-    compile files('lib/livy-server-0.3.0-SNAPSHOT.jar')
+    compile 'io.netty:netty-all:4.0.23.Final'
+    compile 'org.apache.spark:spark-core_2.10:1.6.1'
+    
+    compile files('lib/livy-client-http-0.2.0.jar')
+    compile files('lib/livy-api-0.2.0.jar')    
+    compile files('lib/livy-client-common-0.2.0.jar')
+    compile files('lib/livy-core-0.2.0.jar')
+    compile files('lib/livy-server-0.2.0.jar')
 }
 
