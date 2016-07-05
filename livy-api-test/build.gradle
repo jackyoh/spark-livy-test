@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+eclipse {
+
+  jdt {
+     sourceCompatibility = 1.7
+     targetCompatibility = 1.7
+  }
+
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://central.maven.org/maven2"
+    }
+    maven {
+        url "http://repository.cloudera.com/cloudera/cloudera-repos"
+    }
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+    compile files('lib/livy-api-0.3.0-SNAPSHOT.jar')    
+    compile files('lib/livy-client-common-0.3.0-SNAPSHOT.jar')
+    compile files('lib/livy-core-0.3.0-SNAPSHOT.jar')
+    compile files('lib/livy-rsc-0.3.0-SNAPSHOT.jar')
+    compile files('lib/livy-server-0.3.0-SNAPSHOT.jar')
+}
+

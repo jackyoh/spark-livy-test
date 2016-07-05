@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+eclipse {
+
+  jdt {
+     sourceCompatibility = 1.7
+     targetCompatibility = 1.7
+  }
+
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://central.maven.org/maven2"
+    }
+    maven {
+        url "http://search.maven.org"
+    }
+}
+
+dependencies {
+    compile 'org.apache.hadoop:hadoop-common:2.7.0'
+    compile 'org.apache.hadoop:hadoop-hdfs:2.7.0'
+    compile 'org.apache.hadoop:hadoop-mapreduce-client-common:2.7.0'
+    compile 'org.mockito:mockito-all:1.8.4'
+    compile 'junit:junit:4.12'
+    compile 'org.apache.spark:spark-launcher_2.11:1.6.1'
+    compile 'org.apache.spark:spark-core_2.10:1.6.1'    
+}
